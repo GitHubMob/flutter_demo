@@ -17,6 +17,11 @@ class App  extends StatelessWidget {
 }
 
 class Home extends StatelessWidget {
+
+  Widget _listItemBuilder(BuildContext context, int index){
+    return Text(posts[index].title);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +29,10 @@ class Home extends StatelessWidget {
         title: Text('Flutter'),
         elevation: 0.0,
       ),
-      body: Hello()
+      body: ListView.builder(
+        itemCount: posts.length,
+        itemBuilder: _listItemBuilder,
+      )
     );
   }
 }
