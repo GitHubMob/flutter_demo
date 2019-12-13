@@ -4,6 +4,7 @@ import './demo/drawer_demo.dart';
 import './demo/bottom_navigationbar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/view_demo.dart';
+import './demo/sliver_demo.dart';
 
 void main(List<String> args) => runApp(App());
 
@@ -11,7 +12,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Home(),
+      home: SliverDemo(),
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
@@ -59,7 +60,8 @@ class Home extends StatelessWidget {
             children: <Widget>[
               ListVideoDemo(),
               BasicDemo(),
-              Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
+              SliverDemo(),
+              // Icon(Icons.directions_bike, size: 128.0, color: Colors.black12),
               ViewDemo(),
             ],
           ),

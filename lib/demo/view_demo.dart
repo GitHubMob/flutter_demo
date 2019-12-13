@@ -27,7 +27,7 @@ class GridViewBuilderDemo extends StatelessWidget {
       itemBuilder: _gridItemBuilder,
       gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
         //  crossAxisCount: 2,
-          maxCrossAxisExtent:250,
+          maxCrossAxisExtent:150,
          crossAxisSpacing: 8,
          mainAxisSpacing: 8,
       ),
