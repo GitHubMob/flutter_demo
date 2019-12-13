@@ -5,6 +5,7 @@ import './demo/bottom_navigationbar_demo.dart';
 import './demo/basic_demo.dart';
 import './demo/view_demo.dart';
 import './demo/sliver_demo.dart';
+import './demo/navigatior_demo.dart';
 
 void main(List<String> args) => runApp(App());
 
@@ -12,7 +13,12 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SliverDemo(),
+      // home: NavigatorDemo(),
+      initialRoute: '/',
+      routes: {
+        '/':(context) => Home(),
+        '/about':(context) => Page(title: 'about')
+      },
       theme: ThemeData(
           primarySwatch: Colors.yellow,
           highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
